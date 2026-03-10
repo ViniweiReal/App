@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow UI App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <h1>TaskFlow</h1>
+        <p>Plan your day with a clean, friendly interface.</p>
+      </header>
+
+      <section class="card">
+        <form id="task-form" class="task-form">
+          <label for="task-input">Add a task</label>
+          <div class="input-row">
+            <input id="task-input" type="text" placeholder="e.g. Finish UI mockup" required />
+            <button type="submit">Add</button>
+          </div>
+        </form>
+
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+        <div class="footer-row">
+          <span id="task-count">0 tasks</span>
+          <button id="clear-completed" class="secondary">Clear completed</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
