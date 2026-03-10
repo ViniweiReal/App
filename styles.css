@@ -1,0 +1,107 @@
+:root {
+  --bg: #f3f5ff;
+  --card: #ffffff;
+  --border: #d9ddff;
+  --text: #1e2440;
+  --primary: #4f46e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(145deg, #eef0ff, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.app {
+  width: min(920px, 100%);
+}
+
+h1 {
+  margin-bottom: 0.35rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 28px rgb(52 58 146 / 14%);
+}
+
+.controls {
+  margin-bottom: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+.row {
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.6rem;
+}
+
+input,
+button {
+  font: inherit;
+  border-radius: 10px;
+}
+
+input {
+  border: 1px solid var(--border);
+  padding: 0.62rem 0.72rem;
+  width: 140px;
+}
+
+button {
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.62rem 0.9rem;
+  cursor: pointer;
+}
+
+#status {
+  display: block;
+  margin-top: 0.45rem;
+  color: #5f668b;
+}
+
+#smiley-canvas {
+  width: 100%;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: #fafbff;
+}
+
+.smiley {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.smiley:hover {
+  transform: scale(1.03);
+}
+
+.smiley .face {
+  stroke: transparent;
+  stroke-width: 5;
+}
+
+.smiley.selected .face {
+  stroke: #4f46e5;
+}

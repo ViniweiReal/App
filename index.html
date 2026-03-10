@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hex Smiley Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Hex Smiley Editor</h1>
+      <p>Klicke einen Smiley an und ändere seine Farbe per Hex (z. B. <code>#ff0000</code>).</p>
+
+      <section class="panel">
+        <div class="controls">
+          <label for="hex-input">Farbe (Hex)</label>
+          <div class="row">
+            <input id="hex-input" type="text" value="#ffcc00" placeholder="#RRGGBB" maxlength="7" />
+            <button id="apply-btn">Farbe anwenden</button>
+          </div>
+          <small id="status">Ausgewählt: Smiley 1</small>
+        </div>
+
+        <svg id="smiley-canvas" viewBox="0 0 780 240" role="img" aria-label="Klickbare Smileys">
+          <g class="smiley selected" data-id="1" transform="translate(130,120)">
+            <circle class="face" r="80" fill="#ffcc00"></circle>
+            <circle cx="-28" cy="-18" r="8" fill="#1c1c1c"></circle>
+            <circle cx="28" cy="-18" r="8" fill="#1c1c1c"></circle>
+            <path d="M -35 20 Q 0 55 35 20" fill="none" stroke="#1c1c1c" stroke-width="6" stroke-linecap="round"></path>
+          </g>
+
+          <g class="smiley" data-id="2" transform="translate(390,120)">
+            <circle class="face" r="80" fill="#ffcc00"></circle>
+            <circle cx="-28" cy="-18" r="8" fill="#1c1c1c"></circle>
+            <circle cx="28" cy="-18" r="8" fill="#1c1c1c"></circle>
+            <path d="M -35 20 Q 0 55 35 20" fill="none" stroke="#1c1c1c" stroke-width="6" stroke-linecap="round"></path>
+          </g>
+
+          <g class="smiley" data-id="3" transform="translate(650,120)">
+            <circle class="face" r="80" fill="#ffcc00"></circle>
+            <circle cx="-28" cy="-18" r="8" fill="#1c1c1c"></circle>
+            <circle cx="28" cy="-18" r="8" fill="#1c1c1c"></circle>
+            <path d="M -35 20 Q 0 55 35 20" fill="none" stroke="#1c1c1c" stroke-width="6" stroke-linecap="round"></path>
+          </g>
+        </svg>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
