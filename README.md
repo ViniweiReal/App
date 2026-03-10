@@ -17,3 +17,19 @@ Danach im Browser öffnen: `http://localhost:4173`.
 3. Auf **Farbe anwenden** klicken.
 
 Nur der ausgewählte Smiley wird eingefärbt, die anderen behalten ihre Farbe.
+
+## Wenn GitHub „This branch has conflicts“ zeigt
+
+Das ist ein Git-Problem, nicht ein Browser-Problem. Löse es lokal so:
+
+```bash
+git fetch origin
+git checkout <dein-branch>
+git rebase origin/<ziel-branch>
+# Konflikte in README.md, app.js, index.html, styles.css auflösen
+git add README.md app.js index.html styles.css
+git rebase --continue
+git push --force-with-lease
+```
+
+Danach sollte der Merge-Button wieder funktionieren.
