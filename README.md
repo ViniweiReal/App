@@ -3,6 +3,11 @@
 Eine kleine UI-App: Du klickst auf einen Smiley im Bild und änderst nur dessen Farbe per Hex-Code.
 
 ## Starten
+# TaskFlow UI App
+
+A lightweight single-page task manager with a clean UI.
+
+## Run locally
 
 ```bash
 python3 -m http.server 4173
@@ -33,3 +38,4 @@ git push --force-with-lease
 ```
 
 Danach sollte der Merge-Button wieder funktionieren.
+Then open `http://localhost:4173`.

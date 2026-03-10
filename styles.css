@@ -4,6 +4,14 @@
   --border: #d9ddff;
   --text: #1e2440;
   --primary: #4f46e5;
+  --bg: #f4f6ff;
+  --card: #ffffff;
+  --text: #21253a;
+  --muted: #70768f;
+  --primary: #5b63ff;
+  --primary-dark: #4048eb;
+  --success: #1fb77d;
+  --border: #dde1ff;
 }
 
 * {
@@ -14,6 +22,7 @@ body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background: linear-gradient(145deg, #eef0ff, var(--bg));
+  background: radial-gradient(circle at top left, #e9ecff, var(--bg));
   color: var(--text);
   min-height: 100vh;
   display: grid;
@@ -53,6 +62,38 @@ label {
   margin-top: 0.4rem;
   display: flex;
   gap: 0.6rem;
+  padding: 1.25rem;
+}
+
+.app-shell {
+  width: min(680px, 100%);
+}
+
+.app-header h1 {
+  margin-bottom: 0.35rem;
+}
+
+.app-header p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgb(52 62 179 / 14%);
+  padding: 1.2rem;
+}
+
+.task-form label {
+  font-weight: 600;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.6rem;
 }
 
 input,
@@ -65,6 +106,9 @@ input {
   border: 1px solid var(--border);
   padding: 0.62rem 0.72rem;
   width: 140px;
+  flex: 1;
+  border: 1px solid var(--border);
+  padding: 0.72rem;
 }
 
 button {
@@ -104,4 +148,66 @@ button {
 
 .smiley.selected .face {
   stroke: #4f46e5;
+  padding: 0.72rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+.secondary {
+  background: #edf0ff;
+  color: #2d3473;
+}
+
+.secondary:hover {
+  background: #dfe4ff;
+}
+
+.task-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+}
+
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-actions button {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.done-btn {
+  background: var(--success);
+}
+
+.delete-btn {
+  background: #f35b72;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  align-items: center;
 }
